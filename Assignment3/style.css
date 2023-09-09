@@ -1,0 +1,169 @@
+@import url('attachments/icons/style.css');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.no-scroll {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    height: 72px;
+    padding: 10px;
+}
+
+header .logo {
+    flex-grow: 1;
+}
+
+header img {
+    height: 72px;
+    padding: 10px;
+    justify-self: start;
+}
+
+header .search {
+    width: 232px;
+    padding: 10px;
+    background-color: #2e3339;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.icon-search {
+    font-size: 16px;
+}
+
+.icon-menu {
+    font-size: 18px;
+}
+
+header .search-box {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    margin-left: 10px;
+    color: #fff;
+}
+
+header .search-box:focus {
+    outline: none;
+}
+
+header .icon {
+    cursor: pointer;
+}
+
+header .menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    height: calc(100% - 72px);
+    min-height: 330px;
+    width: 100%;
+    background-color: #000000C6;
+    font-size: 32px;
+    overflow: auto;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+header .menu a:hover {
+    color: #a1a1a1;
+}
+
+header .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+section.main {
+    display: flex;
+    justify-content: center;
+    padding-block: 1.2em;
+    padding-inline: 4em;
+}
+
+section article {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+article img {
+    width: 100%;
+    padding-block: 0.8em;
+}
+
+article .title {
+    font-size: 36px;
+    padding-block: 0.3em;
+}
+
+article .authorship {
+    font-size: 16px;
+}
+
+article .authorship .medium,
+article .authorship .author {
+    font-weight: bold;
+}
+
+article .date {
+    font-size: 14px;
+}
+
+article .content p {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    header .search {
+        background-color: #000;
+    }
+
+    header .search-box::placeholder {
+        color: #c5c5c5
+    }
+}
+
+@media screen and (max-width: 540px) {
+    header .search {
+        display: none;
+    }
+
+    section.main {
+        padding-inline: 2em;
+    }
+}
