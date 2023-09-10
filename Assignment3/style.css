@@ -12,23 +12,19 @@ html {
     padding: 0;
 }
 
-.no-scroll {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
+    position: fixed;
     background-color: #000;
     color: #fff;
     display: flex;
     align-items: center;
     gap: 1em;
     height: 72px;
+    width: 100%;
     padding: 10px;
 }
 
@@ -55,7 +51,8 @@ header .search {
     font-size: 16px;
 }
 
-.icon-menu {
+.icon-menu,
+.icon-close {
     font-size: 18px;
 }
 
@@ -78,7 +75,7 @@ header .icon {
 header .menu {
     list-style: none;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 72px;
     left: 0;
     height: calc(100% - 72px);
@@ -110,7 +107,8 @@ header .menu.active {
 section.main {
     display: flex;
     justify-content: center;
-    padding-block: 1.2em;
+    padding-top: calc(72px + 1.2em);
+    padding-bottom: 1.2em;
     padding-inline: 4em;
 }
 

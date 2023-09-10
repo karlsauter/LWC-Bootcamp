@@ -2,8 +2,6 @@
 
 const menuButton = document.querySelector('header .menu-container .icon-menu')
 const menu = document.querySelector('header .menu-container .menu')
-const html = document.documentElement
-const body = document.body
 
 //Function to toggle te menu
 const toggleMenu = (event) => {
@@ -11,8 +9,6 @@ const toggleMenu = (event) => {
         menu.classList.toggle('active')
         menuButton.classList.toggle('icon-menu')
         menuButton.classList.toggle('icon-close')
-        html.classList.toggle('no-scroll')
-        body.classList.toggle('no-scroll')
     }
 }
 
